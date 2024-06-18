@@ -10,6 +10,10 @@
 
 function countWins(winnerList, country) {
     // your awesome code here
+
+    // 1. usar metodo de array adecuador para filtrar el de objetos winnerList por el "country" que nos pasan por parametro
+
+    // 2. usar propiedad que tienen todos los array para devolver el numero de elementos que contiene dicho array
 }
 
 const winnerList1 = [
