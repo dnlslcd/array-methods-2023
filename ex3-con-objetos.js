@@ -296,12 +296,32 @@ const flightReservations = [
 ];
 
 // Usa el método forEach para iterar por cada uno de los vuelos y mostrarlos por consola
+const allFlights = flightReservations.forEach(()=> {
+  console.log(flightReservations);
+})
+
 
 // Usa el método forEach para mostrar UNICAMENTE el pasajero de cada uno de lo vuelos
+const passengerName = flightReservations.forEach((elem)=>{
+  console.log("Pasajeros de cada vuelo: ", elem.passenger.firstName, elem.passenger.lastName);
+});
 
-// USa el método find para encontrar el vuelo número 'AA456'. Luego, muestra por consola el precio total de este vuelo
+
+// Usa el método find para encontrar el vuelo número 'AA456'. Luego, muestra por consola el precio total de este vuelo
+const findFlightNumber = flightReservations.find((elem)=>{
+  return elem.flightNumber === 'AA456';
+});
+
+console.log("Precio total vuelo AA456: ", findFlightNumber.totalPrice);
+
 
 // Usa el método find para encontrar el vuelo que ha reservado el señor bob.johnson@example.com. Muestra el objeto entero
+const flightReservedBy = flightReservations.find((elem)=>{
+  return elem.passenger.contactInfo.email === "bob.johnson@example.com";
+});
+
+console.log("Aquí está la información de vuelo completa del señor Bob Johnson: ", flightReservedBy);
+
 
 // Usa el método some para averiguar si algún vuelo tiene como destino el aeropuerto de LPA GRAN CANARIA
 
