@@ -324,13 +324,42 @@ console.log("Aquí está la información de vuelo completa del señor Bob Johnso
 
 
 // Usa el método some para averiguar si algún vuelo tiene como destino el aeropuerto de LPA GRAN CANARIA
+const isThisAirportThere = flightReservations.some((elem)=>{
+  return elem.arrival.airport === "LPA Airport";
+})
+
+console.log("Hay algún vuelo con destino al aeropuerto de LPA Gran Canaria? ", isThisAirportThere);
+
 
 // Usa el método every para comprobar si todos los vuelos están confirmados (isConfirmed)
+const areAllFlightsConfirmed = flightReservations.every((elem)=>{
+  return elem.isConfirmed;
+});
+
+console.log("Están todos los vuelos confirmados?", areAllFlightsConfirmed);
+
 
 // Usa el método filter para obtener todos los vuelos que tienen la puerta de embarque 'D5'
+const flightsGateD5 = flightReservations.filter((elem)=>{
+  return elem.gate == "D5";
+});
+
+console.log("Vuelos cuya puerta de embarque es D5: ", flightsGateD5);
+
 
 // Usa el método filter para obtener todos los vuelos que incluyen menús con comida Vegan. BONUS: Muestra por consola el nombre de la aerolínea
+const flightsVegan = flightReservations.filter((elem)=>{
+  return elem.specialMeals.includes("Vegan");
+});
+console.log("Vuelos que incluyen menú Vegan: ", flightsVegan);
+
+const flightsVeganFlightNumber = flightsVegan.map((elem) => {return elem.flightNumber});
+console.log("Nombre de la aerolínea de dichos vuelos: ", flightsVeganFlightNumber);
+
 
 // Usa el método map para convertir cada objeto en un string con el formato 'numero de vuelo'-'compañía area'´Ejemplo : "AA456-American Airlines"
+
+
+
 
 // DIFICIL. USA el método reduce para sumar el conjunto total de puntos obtenidos de loyalyProgram de todos los tickets
