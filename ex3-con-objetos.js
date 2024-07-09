@@ -334,7 +334,7 @@ console.log("Vuelos cuya puerta de embarque es D5: ", gateD5Flights);
 const flightsVegan = flightReservations.filter((elem) => elem.specialMeals.includes("Vegan"));
 console.log("Vuelos que incluyen menú Vegan: ", flightsVegan);
 
-const flightsVeganFlightNumber = flightsVegan.map((elem) => elem.flightNumber);
+const flightsVeganFlightNumber = flightsVegan.map((elem) => elem.airline);
 console.log("Nombre de la aerolínea de dichos vuelos: ", flightsVeganFlightNumber);
 
 
