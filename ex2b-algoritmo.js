@@ -21,9 +21,9 @@ console.log(result1); // [1, 2, 3, 4, 5]
 // Caso de prueba 2: Números decimales en forma de strings
 const testCase2 = ["1.1", "2.2", "3.3", "4.4", "5.5"];
 const result2 = toNumberArray(testCase2);
-console.log(result2); // [1.1, 2.2, 3.3, 4.4, 5.5]
+// console.log(result2); // [1.1, 2.2, 3.3, 4.4, 5.5]
 
 // Caso de prueba 3: Mezcla de números enteros y decimales en forma de strings
 const testCase3 = ["10", "20.5", "30", "40.75", "50"];
 const result3 = toNumberArray(testCase3);
-console.log(result3); // [10, 20.5, 30, 40.75, 50]
+// console.log(result3); // [10, 20.5, 30, 40.75, 50]
